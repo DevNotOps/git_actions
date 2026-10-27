@@ -1,24 +1,16 @@
-name: frist github action
-
+name: first github action
 
 on:
-
   push:
     branches:
-      -main
-
-
+      - main
 
 jobs:
-  
   clone_repo_and_list_it:
-
-    run_on: ubuntu-latest
-
+    runs-on: ubuntu-latest
     steps:
-
       - name: checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: list repo file
+      - name: list repo files
         run: ls -la
